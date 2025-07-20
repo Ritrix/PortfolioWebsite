@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6d6e50af08.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+    <!-- iOS Safari -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Favicon ico fallback -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .nav-hover:hover {
+            background-color: rgb(51, 51, 51);
+            color: white !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
+
+        .sidebar {
+            min-width: 200px;
+            max-width: 220px;
+            height: calc(100vh - 56px);
+            /* leave space for fixed navbar */
+            position: sticky;
+            top: 56px;
+            /* navbar height */
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #e9ecef;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        body {
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+
+    <title>Experience</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house" width="30" height="30" class="d-inline-block align-text-top"
+                    style="margin-right: 10px;"></i>
+                Ryan O'Neill Portfolio
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Right-aligned nav links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex pt-5">
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-md-block">
+            <a href="#section1" class="fw-bold">Professional experience</a>
+            <div class="ms-3">
+                <a href="#section2" class="d-block">Graham</a>
+                <a href="#section3" class="d-block">Stryker</a>
+                <a href="#section4" class="d-block">Domino's</a>
+            </div>
+            <a href="#section5" class="fw-bold">Skills</a>
+            <div class="ms-3">
+                <a href="#section6" class="d-block">Technical</a>
+                <a href="#section7" class="d-block">Transferrable</a>
+            </div>
+            <a href="#section8" class="fw-bold">Education</a>
+            <div class="ms-3">
+                <a href="#section9" class="d-block">Secondary</a>
+                <a href="#section10" class="d-block">University</a>
+            </div>
+            <a href="#section11" class="fw-bold">Other</a>
+            <div class="ms-3">
+                <a href="#section12" class="d-block">2019 Datathon</a>
+                <a href="#section10" class="d-block">Miscellaneous</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1">
+            <div class="container-fluid">
+                <h1>Experience</h1>
+                <p class="lead">What I've been up to!</p>
+                <section id="section1" style="margin-bottom: 15px;">
+                    <hr>
+                    <h2>Professional experience</h2>
+                    <hr>
+                </section>
+
+                <div class="row">
+
+                    <div class="col">
+                        <section id="section2" style="margin-bottom: 15px;">
+                            <h3>Graham</h3>
+                            <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 200px; margin-left:10px;">
+                                <svg class="h-auto w-[170px] lg:w-[170px]" width="193" height="52" viewBox="0 0 193 52"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M171.929 0.334961L152.462 50.8182H173.532L193 0.334961H171.929Z"
+                                        fill="#00BB1E"></path>
+                                    <path
+                                        class="fill-teal-500 transition-colors md:[.dark-nav_&amp;]:fill-teal-500 md:[.light-nav_&amp;]:fill-white"
+                                        d="M12.1177 36.0801V41.3058H18.7472C17.881 44.0622 15.655 45.7838 12.6033 45.7838C8.71792 45.7838 5.76338 42.5753 5.76338 38.3235C5.76338 34.0716 8.64507 30.8979 12.4334 30.8979C14.5541 30.8979 16.6426 31.5587 18.0106 33.9933L23.5635 32.1674C21.7665 27.6634 17.3873 25.2635 12.4253 25.2635C5.45578 25.2635 0 31.011 0 38.3235C0 45.636 5.48816 51.3747 12.5386 51.3747C19.589 51.3747 24.5915 45.9316 24.5915 38.3582C24.5915 37.7235 24.5591 36.9757 24.4539 36.0801H12.1258H12.1177ZM46.8274 33.9933C46.8274 29.1067 43.4925 25.82 38.4576 25.82H26.688V50.8095H32.419V42.2275H34.1189L41.0398 50.8095H47.9526L40.7241 41.9319C44.4719 41.0363 46.8355 38.0887 46.8355 33.9846M37.8424 37.0801H32.4271V31.0718H37.8424C39.8904 31.0718 41.2098 32.263 41.2098 34.0542C41.2098 35.8454 39.8904 37.0801 37.8424 37.0801ZM90.3361 35.628H80.5416V25.82H74.8268V50.8095H80.5416V41.0015H90.3361V50.8095H96.0509V25.82H90.3361V35.628ZM107.141 25.82L97.5403 50.8095H103.547L105.182 46.262H114.976L116.611 50.8095H122.626L113.025 25.82H107.157H107.141ZM107.108 40.9667L110.079 32.7587L113.05 40.9667H107.108ZM57.8604 25.82L48.2602 50.8095H54.2664L55.9015 46.262H65.696L67.3312 50.8095H73.3455L63.7371 25.82H57.8685H57.8604ZM57.8281 40.9667L60.7988 32.7587L63.7695 40.9667H57.8281ZM144.497 25.82L137.576 43.81L130.655 25.82H124.115V50.8095H129.457V36.5323L134.978 50.8095H140.175L145.695 36.5323V50.8095H151.038V25.82H144.497Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </figure>
+                            <p>
+                                I have been working here since May 2025. Here I am a Systems Analyst, and I build
+                                websites and features used on in house web apps. I've worked with many insdustry
+                                standard technologies here, such as using Figma to take a designers
+                                work and make it real. Here we use ASP.NET core and .NET framework to build these
+                                websites and API's. Here I would use SQL server for database management and would deploy
+                                the web apps using Azure DevOps.
+                            </p>
+                            <p>
+                                I've worked on many projects here, such as a website to monitor the statistics of
+                                certain in house systems. as a result ive gained a lot of experience here with web
+                                development, having now used libraries like Kendo UI
+                                and bootstrap (What this website also uses!). I've also worked on API's and have
+                                experience now using Unity professionally after taking over as the developer of a Unity
+                                AR application.
+                            </p>
+                            <a class="btn btn-primary btn-lg" role="button" href="https://www.graham.co.uk/"
+                                target="_blank">Graham's website</a>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section3" style="margin-bottom: 15px;">
+                            <h3>Stryker</h3>
+                            <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 200px; margin-left:10px;">
+                                <img class="img-fluid d-block d-lg-inline" src="images/Stryker-logo.png" />
+                            </figure>
+                            <p>
+                                I worked at Stryker for 4 years from June 2021 to May 2025. Here I worked as an
+                                Associate Engineer,
+                                where I helped develop and maintain the test systems we would use to test
+                                defibrillators. I originally got a job here as a placement student, but moved onto full
+                                time after I had finished my course in 2023. I worked on many different projects from
+                                scripting tests, writing unit
+                                tests, to designing and maintaining DLLs that were used to communicate with the
+                                different pieces of hardware inside the test systems.
+                            </p>
+                            <p>
+                                At Stryker I worked on C# projects, and did a lot of documentation for these projects
+                                from system assessment forms and verification protocols to system requirements and
+                                design specifications. I also worked with python to develop scripts for data processing,
+                                I worked on arduino microcontrollers and I wrote batch scripts to automate various
+                                processes. I was also in charge of the calibration of the equipment used on site.
+                            </p>
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="https://www.stryker.com/gb/en/index.html" target="_blank">Stryker's website</a>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section4" style="margin-bottom: 15px;">
+                            <h3>Dominos</h3>
+                            <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 200px; margin-left:10px;">
+                                <img class="img-fluid d-block d-lg-inline" src="images/Dominos-logo.png" />
+                            </figure>
+                            <p>
+                                We all have to start somewhere, right? Well this is where I first started working a job.
+                                I worked here for about 8 months before moving to Stryker from October 2020 to May 2021.
+                            </p>
+                            <p>
+                                I got a job here while still studying at university over the Covid-19 period. I worked
+                                as a cashier, pizza maker, cleaner, etc. I would list off all the skills I learned here
+                                such as teamwork and time management, but really, the main reason I'm mentioning it here
+                                is to show my roots. While my time there was relatively short, I appreciated it all the
+                                same, which is why I still have the cap even all this time after.
+                            </p>
+                            <a class="btn btn-primary btn-lg" role="button" href="https://www.dominos.co.uk/"
+                                target="_blank">Domino's website</a>
+                        </section>
+                    </div>
+                </div>
+                <section id="section5" style="margin-bottom: 15px;">
+                    <hr>
+                    <h2>Skills</h2>
+                    <hr>
+                </section>
+                <div class="row">
+                    <div class="col-12">
+                        <section id="section6" style="margin-bottom: 15px;">
+                            <h3>Technical skills</h3>
+                            <p>
+                                Over the years I've garnered many technical skills, with that in mind I've decided to
+                                list them out here. This is a non exhaustive list, as I may have missed a few, as well
+                                as leaving out libraries or framework specific skills such as Kendo UI, Bootstrap,
+                                pandas, etc.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-12">
+                        <h4>Programming:</h4>
+                        <ul>
+                            <li>C# - Advanced: over 4 years professional usage, almost 10 years including non
+                                professional. Used in many projects from web apps, to DLLs to Unity games.</li>
+                            <li>Python - Advanced: over 4 years professional usage, used in scripting, data
+                                visualisation, and web apps</li>
+                            <li>Java - Intermediate: no professional experience, used in many projects such as android
+                                apps for university</li>
+                            <li>Lua - Intermediate: no professional experience, used in game programming</li>
+                            <li>Batch/Powershell - Basic: little professional experience, used a handful of times to
+                                script
+                                some windows processes</li>
+                            <li>C++ - Basic: Little professional experience in using it to program an arduino
+                                microcontroller</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h4>Database, DevOps and Version control:</h4>
+                        <ul>
+                            <li>SQL - Intermediate: 5 years light usage</li>
+                            <li>SQL Server - Basic: Some light professional usage</li>
+                            <li>Git - Intermediate: 4+ years professional usage</li>
+                            <li>Azure/Azure DevOps - Basic: Some light professional usage</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h4>Web Development:</h4>
+                        <ul>
+                            <li>HTML - Basic: light professional usage</li>
+                            <li>Javascript - Basic: light professional usage</li>
+                            <li>CSS - Basic: light professional usage</li>
+                            <li>Flask - Basic: some usage in personal projects (this site!)</li>
+                            <li>ASP.NET core - Basic: light professional usage</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <h4>Hardware and Electronics:</h4>
+                        <ul>
+                            <li>Soldering - Intermediate: light professional usage, moderate personal project usage.
+                            </li>
+                            <li>CAD modelling - Basic: light usage for personal projects.</li>
+                            <li>PCB/Circuit assembly - Basic: light professional usage</li>
+                            <li>IoT - Basic: some simple projects like a <a
+                                    href="https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/"
+                                    target="_blank">Pi-hole</a></li>
+                            <li>Computer hardware - Intermediate: Built all of my own computers, repaired console
+                                motherboards.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <figure class="float-lg-start" style="max-width: 250px; margin-right:10px;">
+                            <img src="images/controller-board.jpg" alt="controller board"
+                                class="img-fluid d-block d-lg-inline rounded">
+                            <figcaption class="text-muted small mt-1">An Xbox controller board I repaired the sticks on.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <section id="section7" style="margin-bottom: 15px;">
+                            <hr>
+                            <h3>Transferrable skills</h3>
+                            <p>
+                                I have also aquired many transferrable skills as well. Throughout my career I have
+                                become quite good at debugging and problem solving. Much of my day to day for the last
+                                few years has been creating and mainting software long term, and with much of my time
+                                also being spent working on hardware too I have become quite adept at fixing issues, or
+                                even spotting them before they become an issue.
+                            </p>
+                            <p>
+                                Having spent so much of my time now on websites and games where UX (user experience) is
+                                a key part, I believe I have become very well versed in the best practices towards
+                                building intuitive and easy to use UI. This website for example, I believe showcases my
+                                skills in UX well
+                            </p>
+                            <p>
+                                My teamwork skills are excellent, having now collaborated many times on a multitude of
+                                projects. from game jams, to hackathons, and even just working with collegues I feel I
+                                have ammassed a plethora of skills that I believe makes me a great team player. I have
+                                also led many of these projects as team leader, and as such my leadership skills are
+                                good too.
+                            </p>
+                            <p>
+                                My testing and QA skills are quite good, as I spent much of my time at Stryker working
+                                on test systems, which they themselves required rigorous testing to ensure no faults
+                                would arise while testing a defibrillator. I have worked on unit testing, black-box and
+                                white-box testing. And of course, testing in production (I have been informed that I
+                                must put a disclaimer: I do not test in production - not intentionally at least!).
+                            </p>
+                            <p>
+                                One of my greatest skills, at least in my opinion, is my adaptability. I like to think
+                                of myself as a jack of all trades as I have become familiar with many different aspects
+                                of both software and hardware. Having now worked on back end web development, front end,
+                                Databases, DLLs, scripting, game development, Windows applications, Android applications
+                                PCB's/Circuitry, and much more, I feel confident in any role.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+                <section id="section8" style="margin-bottom: 15px;">
+                    <hr>
+                    <h2>Education</h2>
+                    <hr>
+                </section>
+                <div class="row">
+                    <div class="col-12 col-xl-9">
+                        <section id="section9" style="margin-bottom: 15px;">
+                            <h3>Secondary Education</h3>
+                            <p>
+                                At secondary school I achieved the following grades for my A Levels: <br>
+                                Technology and Design: B, Business Studies: C, Software Systems: D
+                            </p>
+                            <p>
+                                For my GCSE's i achieved the following grades: <br>
+                                French: C, Double Award Science: BC, English: B, Technology and Design:
+                                B, Business studies: A, Mathematics: A, ICT: A
+                            </p>
+                            <hr>
+                        </section>
+                        <section id="section10" style="margin-bottom: 15px;">
+                            <h3>University Education</h3>
+                            <p>
+                                At my first year of University, I achieved the following certifications: <br>
+                                Mathematics for computing: 1st, Software development 1: 1st, Systems analysis and
+                                design: 2.1, Database systems: 1st, Computer Hardware and Operating System: 1st,
+                                Software Development 2: 1st
+                            </p>
+                            <p>
+                                For my second year of University, I achieved the following certifications: <br>
+                                UX: 1st, Object oriented programming: 1st, Mobile application development: 1st, Computer
+                                networks and security: 1st, Web Application development: 1st, Algorithms and data
+                                structures: 1st
+                            </p>
+                            <p>
+                                For my final year of University (3rd was a placement year), I achieved the following
+                                certifications: <br>
+                                Cyber Security: 1st, Concurrent Distributed Systems: 1st, Networking Operating Systems:
+                                2.1, Advanced Mobile Technology: 1st, Final year project: 1st
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-xl-3 d-none d-xl-block">
+                        <figure class="float-lg-start" style=" margin-right:10px;">
+                            <img src="images/graduationPhoto.jpg" alt="graduation image"
+                                class="img-fluid d-block d-lg-inline rounded">
+                            <figcaption class="text-muted small mt-1">Me, having graduated University.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <section id="section11" style="margin-bottom: 15px;">
+                    <hr>
+                    <h2>Other experience</h2>
+                    <hr>
+                </section>
+                <div class="row">
+                    <div class="col-12">
+                        <section id="section12" style="margin-bottom: 15px;">
+                            <h3><Strong>2019</Strong> Datathon (Hackathon)</h3>
+                            <p>
+                                In 2019 I participated in a Hackathon where we were given a data set for some solar
+                                panels and tasked to create a software solution to recognising patterns.
+                            </p>
+                            <ul>
+                                <li>I led the team to create a program to view the data in real time.</li>
+                                <li>We also had the software make future predictions using machine learning AI. And we
+                                    were able to achieve an accuracy of up to 70%</li>
+                                <li>We placed in the runners up category out of around 300 other contestants.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <section id="section13" style="margin-bottom: 15px;">
+                    <h3>Miscellaneous</h3>
+                    <p class="text-muted small">
+                        Some more things I am familiar with: Excel, Word, Zoom, Trello, Slack, Kendo UI, Hornbill,
+                        GitHub, GitLab, Unity, .NET framework, .NET core, AWS (Amazon Web Services), Bootstrap, Flask,
+                        Game Development, Pixel art, SSH, Bash, AutoHotKey.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6d6e50af08.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+    <!-- iOS Safari -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Favicon ico fallback -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        .nav-hover:hover {
+            background-color: rgb(51, 51, 51);
+            color: white !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
+
+        .sidebar {
+            min-width: 200px;
+            max-width: 220px;
+            height: calc(100vh - 56px);
+            /* leave space for fixed navbar */
+            position: sticky;
+            top: 56px;
+            /* navbar height */
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #e9ecef;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            height: 720px;
+            /* 16:9 container size */
+            margin: 0 auto;
+            background: #000;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .iframe-scaler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: top left;
+        }
+
+        #game-frame {
+            border: none;
+            display: block;
+        }
+
+        body {
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+
+    <title>Project View</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house" width="30" height="30" class="d-inline-block align-text-top"
+                    style="margin-right: 10px;"></i>
+                Ryan O'Neill Portfolio
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Right-aligned nav links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex pt-5">
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-md-block">
+            <a href="#section1" class="fw-bold">Project</a>
+            <a href="#section2" class="fw-bold">Project description </a>
+            <a href="#section3" class="fw-bold">External link</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1">
+            <div class="container-fluid">
+                <h1 id="game-title"></h1>
+                <p id="game-lead" class="lead text-muted mt-2"></p>
+
+                <section id="section1">
+                    <div class="row">
+                        <hr>
+                        <div class="container my-4">
+                            <div id="game-container" class="iframe-wrapper">
+                                <div class="iframe-scaler">
+                                    <iframe id="game-frame" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </section>
+
+                <section id="section2">
+                    <div class="row">
+                        <h2>Information:</h2>
+                        <p id="game-description"></p>
+                        <hr>
+                    </div>
+                </section>
+
+                <section id="section3">
+                    <div class="row">
+                        <div class="col-6 col-xl-4">
+                            <h2>External link to project:</h2>
+                        </div>
+                        <div class="col">
+                            <div style="text-align: center;">
+
+                                <a class="btn btn-primary btn-lg" role="button" id="game-link" href="#"
+                                    target="_blank">External Link</a>
+                            </div>
+
+                        </div>
+                        <div class="col-0 col-xl-4"></div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // descriptions and relevant information
+        const games = {
+            "extended-execution": {
+                title: "Extended Execution",
+                lead: "Thrash, slash and kill your way to victory!",
+                iframeSrc: "https://itch.io/embed-upload/13515211?color=000000",
+                description: `
+                    <strong>Controls:</strong><br>
+                    W to move up<br>
+                    A to move left<br>
+                    S tp move down<br>
+                    D to move right<br>
+                    J to do a light attack (Hold it in to do a 3 hit combo!<br>
+                    K to do a heavy attack (can interrupt any light attack, and if you press different movement directions you'll get different attacks!)<br><br>
+                    
+                    <strong>Description:</strong><br>
+                    You're a criminal set to be exected for treason, but you're allowed to live for as long as you can last in the Roman Colosseum.<br><br>
+
+                    Fight endless waves against ever increasing difficulties of enemies. Multiple enemy types, a shop with upgrades, a fleshed out combo system, with every animation hand drawn, all of which done in only 36 hours!<br><br>
+
+                    How many waves can you survive?<br><br>
+
+                    <strong>Tips:</strong><br>
+                    1. Each hit adds one to the combo counter, any gold earned from kills is multiplied by the combo counters number, so try and get it as high as you can.<br><br>
+
+                    2. The backwards heavy attack has a small enough end lag that it'll allow you to continue a combo into a new light attack, letting you rack up crazy high combos!<br><br>
+
+                    3. Each enemy has a randomized amount of health, for basic enemies its low, and Zealots are quite high. Starting on wave twenty, however, every enemy will have their base max health, plus the wave number divided by five (rounded down) added. So on round twenty, a basic enemy with three health, will actually instead have seven.<br><br>
+
+                    4. You can only upgrade your stats a certain amount, as they each have a certain maximum they can reach, think you can max them all out?<br><br>
+
+                    5. Because heavy attacks can interrupt any light attack, heavies are great for getting out of sticky situations.<br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                     - It's a beat-em-up inspired by the likes of streets of rage.<br> 
+                     - This was made in a 36 hours for the Devs that Jam #13 Game Jam.<br>
+                     - The games zealots will only fire off screen unless you're hugging a wall due to a bug.<br>
+                     - The game originally had a blocking system, where standing still would negate all damage, which is why your character holds his sheild out like that in his idle pose. This was cut for balance purposes.<br>
+                     - The artstyle with the blocky characters was not intentional, they were meant to be used as a reference to draw onto, but we needed far more sprites than anticipated, so had to stick to the blocky characters. Ironically it gave the game more charm.
+                `,
+                link: "https://aaa-3xa.itch.io/extended-execution",
+                width: 1920,
+                height: 1080
+            },
+            "run-from-the-light": {
+                title: "Run from the light",
+                lead: "Dash to the end in this dashing platformer!",
+                iframeSrc: "https://itch.io/embed-upload/8960967?color=3c0000",
+                description: `
+                    <strong>Controls:</strong><br>
+                    A to move left<br>
+                    D to move right<br>
+                    J to jump<br>
+                    K to dash (you can chain these together by jumping and dashing to go super fast!)<br><br>
+                    
+                    <strong>Description:</strong><br>
+                    You play as a vampire running from the nearest village after feeding to get back to your castle before sunrise. Run, jump and dash to get there as quick as you can!<br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                     - The game you see here has some awful screen-crunch. Click on the external link and download the game there for the best experience.<br>
+                     - It's a 2D sidescroller. This was made in a day for the Spooky 2D Game Jam 2023.
+                `,
+                link: "https://leaf-1.itch.io/run-from-the-light",
+                width: 640,
+                height: 360
+            },
+            "desolation": {
+                title: "Desolation",
+                lead: "Survive the depths of space",
+                iframeSrc: "https://scratch.mit.edu/projects/163163733/embed",
+                description: `
+                    <strong>Controls:</strong><br>
+                    THIS GAME IS MOBILE COMPATIBLE!<br>
+                    click to move<br>
+                    space to shoot<br>
+                    these controls can be swapped in the pause menu.<br>
+                    move mouse to aim<br>
+                    p to pause<br>
+                    m to use the special ability<br>
+                    click the green flag twice to start<br><br>
+
+                    MOBILE:<br>
+                    with mobile controls 1 tap anywhere on the screen to aim in that direction. you will automatically fire. you can tap the buttons at the bottom of the screen to pause the game or use your special ability<br><br>
+
+                    for mobile controls 2: use the right hand side of the screen as a joystick that allows you to aim (i.e. tap and drag the screen in the direction you want to shoot) and do the same on the left hand side of the screen to move.<br><br>
+                    
+                    <strong>Description:</strong><br>
+                    You play as the last survivor of your crew in a uniquely powerful ship that can upgrade itself to exploit the weaknesses of your enemies. Fight to survive in this desolate, endless expanse of space.<br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                     - This game was the last game I officially made on scratch before moving over to unity.<br>
+                     - This game was designed with 2 principles in mind that I rarely took into account beforehand:<br>
+                         - Make it look as good as possible.<br>
+                         - And make it control as simple as possible, so even my mum could play. Which is why the main controls can be boiled down to just 2 buttons<br><br>
+
+                     - Everything in this game aside from the boss battle music is either royalty free or custom made. This is because I had originally intended this game to be a bridging game between scratch and unity, and wanted to remake the game in unity and publish it on steam.<br>
+                     - After the bridging idea fell through, I did think of revisiting the game in a sequel. Except the new game would let you explore space in an open world style and would have rpg mechanics and an expansive story. Feature creep grew however and I've shelved the idea for the time being.
+                `,
+                link: "https://scratch.mit.edu/projects/163163733/",
+                width: 640,
+                height: 360
+            },
+            "paintformer": {
+                title: "Paintformer",
+                lead: "Ever wanted to play as those doodles you used to scribble in your notepad when you were bored?",
+                iframeSrc: "https://scratch.mit.edu/projects/138277081/embed",
+                description: `
+                    <strong>Controls:</strong><br>
+                    use the arrow keys to move and jump<br>
+                    right = ><br>
+                    left = <<br>
+                    jump = ^<br><br>
+
+                    jump on enemies heads and avoid obstacles to get to your goal!<br><br>
+
+                    <strong>Description:</strong><br>
+                    Play as a little doodle and try and make it to the portal at the end of each level!<br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                     - Aside from the background, the game is entirely made of vectors, meaning it scales very well to any size of screen.<br>
+                     - I made the basis to this game about a year or two before actually making the levels.<br>
+                     - The game only has one jump height, meaning some jumps are unnecessarily hard, while it would have been an easy fix, I had little faith in this game, and was experiencing burnout, so never bothered to fix it. In fact, this game is the only scratch project I never updated after releasing it.<br>
+                     - Even though I had little faith in this game, ironically it is actually very polished outside of the jump, and was often praised as my best game at the time. This taught me that visuals and polish often matter more than features in games, which ended up making my future projects even better.<br>
+                     - I dont like killing the wandering circle enemies, they're not even programmed to try and attack you, they just like walking around.
+                `,
+                link: "https://scratch.mit.edu/projects/138277081",
+                width: 640,
+                height: 360
+            },
+            "tnld": {
+                title: "The Night of the Living Dead",
+                lead: "Survive the night, as long as you can.",
+                iframeSrc: "https://scratch.mit.edu/projects/477220676/embed",
+                description: `
+                    <strong>Controls:</strong><br>
+                    Try training mode to learn about the game<br><br>
+                    W - move up<br>
+                    A - move left<br>
+                    S - move down<br>
+                    D - move right<br>
+
+                    MOUSE 1 - fire and press buttons<br>
+
+                    E - open the shop (survival mode only)<br>
+
+                    F - knife<br>
+                    G - throw grenades<br>
+                    SPACE BAR - use your characters special ability<br><br>
+
+
+                    <strong>Description:</strong><br>
+                    You play as a kid, left to die in a zombie apocalypse. Level up, buy new guns, unlock new characters and more on your journey to survive! It can be quite fun, though my naming could have been a bit more creative considering this has absolutely nothing to do with the classic movie.<br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                     - The version you see here has the gore added back in, as well as a few fixes, as scratch had some practices which would make projects with gore less visible to users of the site. You can view the original without gore <a href="https://scratch.mit.edu/projects/128801977/" target="_blank" rel="noopener noreferrer">here.</a>.<br>
+                     - This was easily my most ambitious project at the time, complete with a levelling system, training mode, character select, story mode, cheats, save system, friendly bot support, tons of weapons, achievements, extras, and probably more that I've missed.<br>
+                     - For a while, this was the game I was most proud of, yet today I look back on this and just think of it as a bloated mess. Overstuffed with features, yet lacking basic quality of life changes and looking pretty underwhelming. While the game may have many features, it made me realise that what makes a game "feel" good, is the small things, like a well tuned jump or crunchy explosion upon beating an enemy.<br>
+                     - The game was originally going to also have a competitive online multiplayer gamemode, where two players could duke it out against each other online.<br>
+                     - The story is terrible, my 15 year old self was not the best storyteller. Funny enough, the story was actually slightly worse up until a small rewrite I did a few months after release.<br>
+                     - The game has awful optimisation, meaning at the time most systems struggled with it when it got more hectic, however you could mitigate this by playing the game from the link in the description, which would bring you to a site which uses a tool to convert the code into entirely javascript, making it much more performant.<br>
+
+                `,
+                link: "https://scratch.mit.edu/projects/477220676",
+                width: 640,
+                height: 360
+            },
+            "presentation-game": {
+                title: "The Presentation game!",
+                lead: "Make your friends Laugh! (Unplayable on the net just yet, but will be soon!)",
+                description: `
+                    <strong>Description:</strong><br>
+                    This was a game inspired by a Tomska video, where he had to give a presentation on a random topic, yet the images on the slides were random. I decided to turn this concept into a game. 
+                    I made this a number of years ago and have broken it out with some friends a few times, its always a great time. The main gimmick of this version over the jackbox games is that you as 
+                    the user can put any images you want into an images folder, and they will be randomised into the game in a powerpoint presentation style. Before you do a presentation, you will be given 
+                    a random topic like "Defend and confess your sins to god" or "Pitch the next star wars movie", then each subsequent slide will consist of one random image from your images folder, 
+                    and you must try and incorporate it into the presentation. So you may get an image of shrek, or an image of the eiffel tower, or even an image of yourself if you put one into that folder. 
+                    No two images will ever repeat until all images have been shown, even when a new presentation starts. Your goal is to make your friends laugh, amd whoevers presentation elicited the most laughs, wins.<br>
+                    Unfortunately due to the nature of the images being usually stolen from the internet, it's actually quite difficult to release the game, or even host it here without running into some 
+                    copyright troubles. Which is why you dont see it here just yet. Though I do intend to take my own photos and make my own images that I can ship with the game and release it. When that happens 
+                    I'll update this page with it.<br><br>
+
+                    
+                    <strong>General Trivia:</strong><br>
+                     - This game was made in only a day, right before I was to have friends over. It was genuinely hilarious to play when they arrived.<br>
+                     - The voting system is pretty abysmal at the moment.<br>
+                     - When I make my own images, I also intend to link this game to use your phone as the controller, much like a jackbox game, which should make voting much easier
+                `,
+                link: "projects.html",
+                width: 640,
+                height: 360
+            },
+            "snake": {
+                title: "Snake",
+                lead: "It's snake, what more did you expect?",
+                description: `
+                    <strong>Description:</strong><br>
+                    This was simply a challenge to myself a while back, to make something in a language I dont know, without using any engines or tools.
+                    As a result, I ended up making snake in C++ and did it using just the console. Its not great, but it was a fun challenge nonetheless.
+                    the external link here will take you to the github page if you're really that keen on a game of snake.<br><br>
+
+                    
+                    <strong>General Trivia:</strong><br>
+                     - This was one of, if not the first game I made without using any engine of any description.
+                `,
+                link: "https://github.com/Ritrix/Snake",
+                width: 640,
+                height: 360
+            },
+            "first-website": {
+                title: "My First Website",
+                lead: "Its was my first website, so dont judge it too harshly!",
+                description: `
+                    <strong>Description:</strong><br>
+                    This was simply a website I decided to make on a whim to see if I could do it. As a result, it's mostly humerous and not serious at all. I'm only putting it here so you can see the difference between it and this one.
+
+                    
+                    <strong>General Trivia:</strong><br>
+                     - None of the information on that website is true, I promise I dont live in the family guy house.
+                `,
+                link: "https://ritrix.github.io/first_Website/",
+                width: 640,
+                height: 360
+            },
+            "rty": {
+                title: "rty",
+                lead: "My primary school project, I was 10!",
+                iframeSrc: "https://scratch.mit.edu/projects/1196832698/embed",
+                description: `
+                    <strong>Controls:</strong><br>
+                    Just press the green flag<br><br>
+                    
+                    <strong>Description:</strong><br>
+                    I made this project back in primary school, it was my first experience with programming. I still remember seeing the other kids produce far more impressive things and only wished I could have done the same, well look at me now! <br><br>
+                    
+                    <strong>General Trivia:</strong><br>
+                      - If I am remembering correctly, the class viewed the best projects together. This was not one of the projects viewed, I assume because it was too good and might have made the other kids feel inferior.
+                `,
+                link: "https://scratch.mit.edu/projects/1196832698/",
+                width: 640,
+                height: 360
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const gameId = params.get("id");
+        const game = games[gameId];
+
+        if (game) {
+            const iframe = document.getElementById("game-frame");
+            const scaler = document.querySelector(".iframe-scaler");
+
+            document.getElementById("game-title").textContent = game.title;
+            document.getElementById("game-description").innerHTML = game.description;
+            document.getElementById("game-link").href = game.link;
+            document.getElementById("game-link").textContent = game.title;
+            const leadElement = document.getElementById("game-lead");
+            if (game.lead) {
+                leadElement.textContent = game.lead;
+                leadElement.style.display = "block";
+            } else {
+                leadElement.style.display = "none";
+            }
+            if (game.iframeSrc) {
+                iframe.src = game.iframeSrc;
+            } else {
+                iframe.src = ""
+            }
+
+            function scaleIframeToFit(width, height) {
+                const container = document.getElementById("game-container");
+                const scaler = document.querySelector(".iframe-scaler");
+                const iframe = document.getElementById("game-frame");
+
+                const scaleX = container.clientWidth / width;
+
+                iframe.width = width;
+                iframe.height = height;
+
+                scaler.style.width = `${width}px`;
+                scaler.style.height = `${height}px`;
+                scaler.style.transform = `scale(${scaleX})`;
+
+                // Dynamically set container height to match scaled height
+                container.style.height = `${height * scaleX}px`;
+            }
+
+            scaleIframeToFit(game.width, game.height);
+            window.addEventListener("resize", () => scaleIframeToFit(game.width, game.height));
+        } else {
+            document.body.innerHTML = "<p>Game not found.</p>";
+        }
+    </script>
+
+</body>
+
+</html>

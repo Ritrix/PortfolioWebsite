@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6d6e50af08.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+    <!-- iOS Safari -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Favicon ico fallback -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .nav-hover:hover {
+            background-color: rgb(51, 51, 51);
+            color: white !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
+
+        .sidebar {
+            min-width: 200px;
+            max-width: 220px;
+            height: calc(100vh - 56px);
+            /* leave space for fixed navbar */
+            position: sticky;
+            top: 56px;
+            /* navbar height */
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #e9ecef;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        body {
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+
+    <title>About</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house" width="30" height="30" class="d-inline-block align-text-top"
+                    style="margin-right: 10px;"></i>
+                Ryan O'Neill Portfolio
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Right-aligned nav links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex pt-5">
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-md-block">
+            <a href="#section1" class="fw-bold">Intro</a>
+            <a href="#section2" class="fw-bold">Early Years</a>
+            <a href="#section3" class="fw-bold">Software</a>
+            <a href="#section4" class="fw-bold">Hardware</a>
+            <a href="#section5" class="fw-bold">Education</a>
+            <a href="#section6" class="fw-bold">University</a>
+            <a href="#section7" class="fw-bold">Today</a>
+            <a href="#section8" class="fw-bold">Final thoughts</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1">
+
+            <div class="container-fluid">
+                <h1 class="display-4">About</h1>
+                <p class="lead">Me?! Thats my favourite topic!</p>
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section1">
+                            <p>As you may already be able to tell, I am incredibly humble, and the beginnings of my
+                                story
+                                are equally so. I was born
+                                in Enniskillen and raised in Ballinamallard in Fermanagh. I've recently moved to belfast
+                                for work (and my sanity)
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section2">
+                            <h2>Early Years</h2>
+                            <figure class="float-lg-start me-lg-3 mb-3" style="max-width: 250px; margin-right:10px;">
+                                <img src="images/Young_me.jpg" alt="young me"
+                                    class="img-fluid d-block d-lg-inline rounded">
+                                <figcaption class="text-muted small mt-1">Thats me! (Old)
+                                </figcaption>
+                            </figure>
+                            <p>I've always had an interest in technology, and my
+                                passion
+                                lies in all things functional and creative. As a kid, I'd play with LEGO, K'NEX and
+                                Meccano, and would often make things out of paper and tape. I'd spend far longer than
+                                I'd like to admit here, toiling away at creating things that never worked as physics was
+                                rarely on my side. I'd build swords and shields
+                                out of paper, and battle with them, though they almost never lasted long.
+                            </p>
+                            <p>
+                                I did get good
+                                at it though, and ended up making guns out of paper, hot glue and elastic bands. I made
+                                crossbows that could shoot grappling hooks, powerful semi automatic weapons, stuff that
+                                really would sting if it hit you. You'd think with that I'd be gunning for a position at
+                                Lockheed Martin, but unfortunately for young me at the time, they don't hire child
+                                prodigies.
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section3">
+                            <h2>My first love: Software</h2>
+                            <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 250px; margin-left:10px;">
+                                <img src="images/old_me.jpeg" alt="old me"
+                                    class="img-fluid d-block d-lg-inline rounded">
+                                <figcaption class="text-muted small mt-1">Thats me! (New!)
+                                </figcaption>
+                            </figure>
+                            <p>However, I soon found my true calling: Computers. Even before I got my first computer, I
+                                had played video games and could only dream of making my own (subtle foreshadowing). We
+                                had a family computer that was awful, even at 5 years old I knew it was junk, but it was
+                                all I had to complete my primary school assignments, so I got used to it. Eventually,
+                                however, my school introduced me to a new program, known as scratch. With this program I
+                                could create my own games, think of the possibilities! And that's about as far as I got
+                                with it in primary school, was just thinking of the possibilities. I did end up
+                                producing a few things with it, but they were terrible, even at the time I thought they
+                                were bad. I still have some, which you can view deeply buried in the projects page. Even
+                                with Scratch's simplicity I was still dumbfounded as a child, though I did get a second
+                                chance to use it in secondary school, and that's where my real journey began.
+                            </p>
+                            <p>Once I had been re-introduced to it a few years into my secondary school education I
+                                immediately fell in love with it and programming. It doesnt hurt that I also fell in
+                                love with Minecraft and some of the fantastic mods for it like computer craft, which
+                                lets you code a little robot buddy in Lua in the game. But back to Scratch, I ended up
+                                making a ton of games with it around this time, some of which you can view in the
+                                projects page! I made space shooters, zombie survival games, 2D platformers, anything
+                                and everything I could imagine. I ended up using the software so much, that when it came
+                                time to make games as an actual module in ICT, I submitted two fully completed
+                                coursework assignments, instead of just one.
+                            </p>
+
+                        </section>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section4">
+                            <h2>My first affair: Hardware</h2>
+                            <figure class="float-lg-start me-lg-3 mb-3" style="max-width: 300px; margin-right:10px;">
+                                <img class="img-fluid d-block d-lg-inline rounded" src="images/soldering_station.jpg" />
+                                <figcaption class="text-muted small mt-1">My soldering station (dont mind the mess)
+                                </figcaption>
+                            </figure>
+
+                            <p>While I spent a good chunk of my secondary school education on the software side of
+                                things, that's only really half the story. As when I joined I took on a technology and
+                                design class, and instantly fell in love with circuitry and hardware. I loved soldering
+                                and creating my own PCB's. I ended up doing it for both my GCSE's and A-Levels where
+                                I made a rudimentary radio transmitter and fan, which would turn on a fan when the
+                                temperature around it got too hot, and send a signal to a radio receiver which would
+                                turn on a light.
+                            </p>
+                            <p>
+                                It was meant for use inside a vehicle, in case you left a pet inside,
+                                It wasn't very good though as the fan was way too low power to do anything and the
+                                distance the signal could travel was laughably short. Even so, I still have a keen
+                                interest in this side of things, which you can probably tell by the picture of my
+                                current workstation on the left.
+                            </p>
+                            <p>
+                                With this new interest in both software and hardware it was only inevitable that I'd
+                                eventually build my own pc to replace my aging laptop, and at around 16 years old I did
+                                exactly that. Goodbye crap-top, and hello to a new world of ultra fast computing! Okay
+                                it wasn't <span class="font-italic">that</span> fast, it only had an AMD A8-7600 APU,
+                                which even for the time was fairly
+                                sluggish. But it was mine, and it was enough to start my journey in computing. It's even
+                                still running today as I used it to build my parents PC, which is still going strong,
+                                not bad for a decade old APU. It wasn't long before I upgraded this thing though, and
+                                ended up with an Intel I5-7400 and GTX 1060. Nowadays I'm running far more powerful
+                                hardware than even that, but as they say, you always remember your first.
+                            </p>
+                        </section>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <section id="section5">
+                            <h2>Learning: The hard way</h2>
+                            <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 300px; margin-left:10px;">
+                                <img class="img-fluid d-block d-lg-inline rounded" src="images/PC.jpg" />
+                                <figcaption class="text-muted small mt-1">PC I built from scratch
+                                </figcaption>
+                            </figure>
+
+                            <p>At A-Levels, I took on a Software Systems course and leaned my first real programming
+                                language: C#. I was tasked with building an application to login and store some data,
+                                and this is where I really fell in love with programming. Everything I had learned and
+                                loved up until this very point all coming together. All my programming experience,
+                                hardware experience, problem solving, creativity, everything! All finally converging on
+                                this one single course... I got a D.
+                            </p>
+                            <p>Yep, a solid D. It's not far off a failure, and most would even consider it to be one.
+                                Though I
+                                cant exactly completely blame myself for this. The school I attended wasn't the most up
+                                to date, and i had to apply to this course outside of my school since they didn't have
+                                the facilities to actually teach a programming course like this. This unfortunately
+                                meant I ended up being dropped into the deep end of things, with my only experience
+                                beforehand being moving Scratch blocks around. As for my other course though, I got a C
+                                in Technology and Design, and a B in Business studies... Yeah I got no excuse for those.
+                            </p>
+                            <p>
+                                It was a wet day in a tent on a camping holiday when I got the bad news: I had been
+                                rejected from every University I had applied to. And as if things couldn't get worse,
+                                the
+                                weather that day was so bad it left a pool at the bottom of our tent, where my newly
+                                acquired Nintendo Switch got submerged and destroyed. Overall, 0/10, would not recommend
+                                that campsite.
+                            </p>
+                            <p>
+                                That morning it felt like the world was ending, I shrivelled up in my sleeping bag, not
+                                concerned that my electronics were submerged, wallowing in self pity for hours. It was
+                                then that, for whatever reason, I decided to for probably the first time in years to
+                                check my emails. That's when I saw it, an email from Ulster University - they had a
+                                bridging course for those who didn't quite make the cut, pass it and you get in - and I
+                                was invited.
+                            </p>
+
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <hr>
+                        <div class="col">
+                            <section id="section6">
+                                <h2>Bridging the gap at University</h2>
+                                <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 250px; margin-left:10px;">
+                                    <img class="img-fluid d-block d-lg-inline rounded" src="images/Bridge.png" />
+                                    <figcaption class="text-muted small mt-1">The bridge we built, look at all that
+                                        weight!
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    The course was for both engineers and software students, so it had a mish mash of
+                                    engineering and programming modules. The programming ones were simple, like making a
+                                    robot move with some basic commands they teach you on the day. One of the modules
+                                    however, was to design and build a bridge out of only paper and masking tape, Just
+                                    like I had done as a kid! It was one of the engineering tasks, you were graded on
+                                    how heavy the bridge was compared to how much weight it could support while also
+                                    needing to allow a golf ball to travel across it unimpeded. It's safe to say, we
+                                    aced it as pictured to the right. In fact we did so well they ran out of weights to
+                                    test our bridge and ended up needing to go to the gym on campus to get more. We
+                                    ended up doing the best by a long margin, which probably upset quite a few of the
+                                    engineering students, seeing a bunch of computer nerds one up them in an engineering
+                                    task.
+                                </p>
+                                <p>
+                                    With my performance in the bridging course, I ended up getting into Ulster
+                                    University. I learned a lot there, from python and java to embedded systems and
+                                    mobile app development to name
+                                    only a few. I even participated in a Hackathon where our team came third, which for
+                                    whatever reason had a better prize than second. If you want to know more, check out
+                                    the "Experience" page at the top.
+                                </p>
+
+                                <p>
+                                    I met some of my closest friends at University, and performed well, averaging a
+                                    first in all but 2 modules across all 4 years. I'm thankful for Ulster University
+                                    for
+                                    taking a chance on me, and I'm glad I didn't let it go to waste. Through them I
+                                    landed
+                                    a placement opportunity at Stryker Belfast, making the code behind some of their
+                                    testing systems for their defibrillators. I ended up working there for 4 years,
+                                    before eventually leaving and landing a role at Graham's where I work as a Systems
+                                    Analyst on many of their current web apps.
+                                </p>
+
+
+                            </section>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <hr>
+                        <div class="col">
+                            <h2>Today</h2>
+                            <section id="section7">
+                                <p>
+                                    And that brings us up to today!
+                                </p>
+                                <p>
+                                    I still love computers and technology in general, having now made more games and
+                                    apps, worked on Raspberry PI's, repairing old consoles and fixing controllers with
+                                    all that I have learned.
+                                </p>
+                                <p>
+                                    Speaking of old consoles, one of my biggest hobbies I haven't yet mentioned is retro
+                                    games. I've been collecting and repairing old consoles for ages now, and have
+                                    amassed quite the collection. I'm also a huge Lord of the Rings fan, and love all
+                                    things fantasy. I'm effectively your stereotypical nerd, having played my fair share
+                                    of D&D, Magic the gathering, etc.
+                                </p>
+
+
+                            </section>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <hr>
+                        <div class="col">
+                            <section id="section8">
+                                <h2>Final thoughts</h2>
+                                <figure class="float-lg-end me-lg-3 mb-3" style="max-width: 250px; margin-left:10px;">
+                                    <img class="img-fluid d-block d-lg-inline rounded" src="images/me_sexy.jpg" />
+                                    <figcaption class="text-muted small mt-1">Me, present day.
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    So, now you know everything there is to know about me. Or at least, all the
+                                    important bits. I think I'll keep some things like my credit card details a secret
+                                    still. And if you made it this far, thanks for reading! I hope you have enjoyed it,
+                                    and check out the rest of the site, and feel free to get in touch - I'm always
+                                    excited to talk about technology and new opportunies. You can find my contact
+                                    information in the "Contact" page at the top.
+                                </p>
+                                <p class="fst-italic fs-4"> - Ryan.</p>
+
+
+                            </section>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

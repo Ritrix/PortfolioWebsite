@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6d6e50af08.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+    <!-- iOS Safari -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Favicon ico fallback -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .nav-hover:hover {
+            background-color: rgb(51, 51, 51);
+            color: white !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 60px;
+        }
+
+        .sidebar {
+            min-width: 200px;
+            max-width: 220px;
+            height: calc(100vh - 56px);
+            /* leave space for fixed navbar */
+            position: sticky;
+            top: 56px;
+            /* navbar height */
+            background-color: #f8f9fa;
+            padding-top: 1rem;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #e9ecef;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        body {
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+
+    <title>Projects</title>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house" width="30" height="30" class="d-inline-block align-text-top"
+                    style="margin-right: 10px;"></i>
+                Ryan O'Neill Portfolio
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Right-aligned nav links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover active px-3 py-1 fs-5" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex pt-5">
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-md-block">
+            <a href="#section1" class="fw-bold">This website</a>
+            <a href="#section2" class="fw-bold">Extended Execution</a>
+            <a href="#section3" class="fw-bold">Run from the Light</a>
+            <a href="#section4" class="fw-bold">Desolation</a>
+            <a href="#section5" class="fw-bold">Paintformer</a>
+            <a href="#section6" class="fw-bold">Night of the Living Dead</a>
+            <a href="#section7" class="fw-bold">The Presentation Game</a>
+            <a href="#section8" class="fw-bold">Snake</a>
+            <a href="#section9" class="fw-bold">First Website</a>
+            <a href="#section10" class="fw-bold">rty</a>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-grow-1">
+            <div class="container-fluid">
+                <h1>Projects</h1>
+                <p class="lead">Everything I've worked on so far (That im willing to share!).</p>
+                <section id="section1" class="my-4">
+                    <hr>
+                    <h2>This Website</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/codeBehindWebsite.jpg" alt="Portfolio Website Screenshot"
+                                class="img-fluid rounded" style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                Obviously I had to include this website as one of the projects — the link will just take
+                                you to the home page.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button" href="index.html">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section2" class="my-4">
+                    <hr>
+                    <h2>Extended Execution</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/ExtendedExecutionThumbnail.png" alt="ExtendedExecutionThumbnail"
+                                class="img-fluid rounded" style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                This is a beat-em-up style game made in Unity for the Devs that Jam #13 Game Jam. We
+                                unfortunately didn't win, but the game itself is quite good given that we only had 36
+                                hours to make it.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=extended-execution">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section3" class="my-4">
+                    <hr>
+                    <h2>Run from the Light</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/RunFromTheLightThumbnail.png" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                This is a 2D platformer where your goal is to make it to the finish as fast as possible.
+                                The control is fluid, unfortunately there's just not much to do in the game. It was made
+                                in unity as a part of the spooky 2D game jam 2023 in just under 24 hours.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=run-from-the-light">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section4" class="my-4">
+                    <hr>
+                    <h2>Desolation</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/DesolationThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                This is a space shooter made in scratch. You survive waves, unlock upgrade points to
+                                upgrade your ship, and encounter new enemies and bosses as the waves progress.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=desolation">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section5" class="my-4">
+                    <hr>
+                    <h2>Paintformer</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/PaintformerThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                2D platformer made in scratch. You're a little doodle and must make your way to the
+                                portal in all 10 levels, all while avoiding traps and enemies.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=paintformer">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section6" class="my-4">
+                    <hr>
+                    <h2>The Night of the Living Dead</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/TNLDThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                A top-down shooter made in scratch. This game has a ton of features and modes, from a
+                                story mode, to survival, multiple characters, tonnes of weapons, and even a save system.
+                                Theres a lot to do, so try it out!</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button" href="projectView.html?id=tnld">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section7" class="my-4">
+                    <hr>
+                    <h2>The Presentation game (not playable)</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/PresentationGameThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                A party game where you must give a presentation on a random topic, however you have no
+                                idea what each subsequent slide might be. Due to copyright reasons on the images used in
+                                the game, I cannot showcase it here yet.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=presentation-game">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section8" class="my-4">
+                    <hr>
+                    <h2>Snake (not playable natively)</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/SnakeThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                A simple recreation of the classic game "Snake" made entirely in C++ from scratch.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button" href="projectView.html?id=snake">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section9" class="my-4">
+                    <hr>
+                    <h2>My First Website</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/FirstWebsiteScreenshot.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                The first website I ever made, Look at how much better I've become since then! (or
+                                worse, I suppose, depending on your preferences).</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button"
+                                href="projectView.html?id=first-website">Link</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="section10" class="my-4">
+                    <hr>
+                    <h2>rty</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <img src="images/rtyThumbnail.jpg" alt="Thumbnail" class="img-fluid rounded"
+                                style="max-width: 100%;">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>Description:</strong><br>
+                                Quite literally the first thing I ever programmed. I made this using Scratch over 15
+                                years ago now, all the way back when I was 10 years old and still in primary school!
+                                It's a miracle it's survived this long.</p>
+                        </div>
+                        <div class="col-md-2 text-md-end text-center">
+                            <a class="btn btn-primary btn-lg" role="button" href="projectView.html?id=rty">Link</a>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
